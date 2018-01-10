@@ -1,0 +1,71 @@
+\documentclass[letterpaper, addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{float}
+\usepackage{graphicx}
+
+
+%=================================================================================================
+%================ PERSONALIZACIÓN ========================== PERSONALIZACION =====================
+%=================================================================================================
+
+
+%----------------- ENCABEZADO Y PIE DE PAGINA -------------------------
+\headrule
+\footrule
+\lhead{Plantillas \LaTeX}
+\chead{\LaTeX}
+\rhead{Parcial}
+\cfoot{Eletronic-x Ingeniería Laboratorio}
+
+%---------------- INGLES --> ESPAÑOL  ----------------
+\pointpoints{punto}{puntos}
+\bonuspointpoints{punto extra}{puntos extra}
+\totalformat{Pregunta \thequestion: \totalpoints{} puntos}
+\chqword{Pregunta}
+\chpgword{Página}
+\chpword{Puntos}
+\chbpword{Puntos extra}
+\chsword{Puntos obtenidos}
+\chtword{Total}
+\renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:}\enspace}
+
+%---------------- ESPACIADO DE LINEA PUNTEADA ----------------
+\setlength\dottedlinefillheight{7mm}
+
+%---------------- CONTENIDO DE LA LEYENDA ----------------
+\newcommand{\leyenda}{	
+	\begin{center}
+		{\makebox[0.7\textwidth]{Nombre:~\hrulefill} Fecha:~\hrulefill}\\[3mm]
+		\fbox{\fbox{\parbox{\textwidth}{Asegúrese de comprender cada reactivo antes de proceder a responder. Anote debajo de cada reactivo, únicamente la solución a la pregunta o problema, anotando todo el procedimiento realizado para llegar a su resultado en una hoja en blanco adicional. Problema que requiera de procedimiento para obtener su respuesta y no lo presente será invalidado.}}}
+	\end{center}}
+	
+	%---------------- COMANDO PARA IMAGEN PREGUNTA Y RESPUESTA ----------------
+	\newcommand{\imagen}[2]{
+		\begin{figure}[H]
+			\centering
+			\ifprintanswers
+			\includegraphics[width=\linewidth]{img/#2}
+			\else
+			\includegraphics[width=\linewidth]{img/#1}
+			\fi
+		\end{figure}
+	}	
+	
+	
+
+%=================================================================================
+%	Aquí comienza lo bueno, a definir el examen!!!!
+%=================================================================================
+\begin{document}
+
+\printanswers
+
+\leyenda
+
+
+\begin{questions}
+	\question Primer pregunta
+\end{questions}
+
+\end{document}
